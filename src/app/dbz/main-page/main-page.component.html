@@ -12,11 +12,23 @@
       <div class="col-md-6">
         <!-- the (ngSubmit) is used to preventDefault when sending a form -->
         <form (ngSubmit)="send()">
-          <label for="name">Name</label>
-          <input type="text" class="form-control" name="name" id="name">
+          <label for="name">Name: {{newChar.name}}</label>
+          <input 
+            type="text"
+            class="form-control"
+            name="name"
+            id="name"
+            [(ngModel)]="newChar.name"
+          >
           <label for="powerLvl">Power Level</label>
-          <input type="number" class="form-control" name="powerLvl" id="powerLvl">
-            <button type="submit" class="btn btn-primary mt-3">Add</button>
+          <input 
+            type="number"
+            class="form-control"
+            name="powerLvl"
+            id="powerLvl"
+            [(ngModel)]="newChar.powerLvl"
+          >
+          <button type="submit" class="btn btn-primary mt-3">Add</button>
         </form>
       </div>
     </div>
