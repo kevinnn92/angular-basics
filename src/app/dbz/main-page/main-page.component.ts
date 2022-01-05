@@ -21,4 +21,7 @@ export class MainPageComponent {
     powerLvl: 4000
   }
 
+  addNewCharacter(character: DbzCharacter) {
+    this.listOfChars.push(character)
+  }
 }

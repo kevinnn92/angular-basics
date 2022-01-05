@@ -6,7 +6,10 @@
         <app-characters [charData]="listOfChars"></app-characters>
       </div>
       <div class="col-md-6">
-        <app-add [newChar]="newChar"></app-add>
+        <app-add
+          (onNewCharacter)="addNewCharacter($event)"
+          [newChar]="newChar"
+        ></app-add>
       </div>
     </div>
   </div>
