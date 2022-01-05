@@ -17,17 +17,8 @@ export class MainPageComponent {
   ]
 
   newChar: DbzCharacter = {
-    name: '',
-    powerLvl: 0
-  }
-
-  send() {
-    if (this.newChar.name.trim().length === 0) return
-    this.listOfChars.push(this.newChar)
-    this.newChar = {
-      name: '',
-      powerLvl: 0
-    }
+    name: 'Mister Roshi',
+    powerLvl: 4000
   }
 
 }
