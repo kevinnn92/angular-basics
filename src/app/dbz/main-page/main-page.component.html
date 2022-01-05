@@ -1,35 +1,33 @@
 <h1 class="display-3">Dragon Ball Z</h1>
-<div class="container"> 
+<div class="container">
   <div class="row">
     <div class="row">
       <div class="col-md-6">
-        <ul>
-          <li *ngFor="let char of listOfChars">{{char.name}} - {{char.powerLvl | number}}</li>
-        </ul>
+        <app-characters [charData]="listOfChars"></app-characters>
       </div>
       <div class="col-md-6">
         <!-- the (ngSubmit) is used to preventDefault when sending a form -->
         <form (ngSubmit)="send()">
-          <label for="name">Name: {{newChar.name}}</label>
-          <input 
+          <label for="name">Name: {{ newChar.name }}</label>
+          <input
             type="text"
             class="form-control"
             name="name"
             id="name"
             [(ngModel)]="newChar.name"
-          >
+          />
           <label for="powerLvl">Power Level</label>
-          <input 
+          <input
             type="number"
             class="form-control"
             name="powerLvl"
             id="powerLvl"
             [(ngModel)]="newChar.powerLvl"
-          >
+          />
           <button type="submit" class="btn btn-primary mt-3">Add</button>
         </form>
       </div>
     </div>
   </div>
 </div>
-<hr>
+<hr />

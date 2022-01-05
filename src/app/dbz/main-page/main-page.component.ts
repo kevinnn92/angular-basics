@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
 
-interface Character {
-  name: string;
-  powerLvl: number;
-}
+// Interfaces
+import { DbzCharacter } from '../interfaces/dbz.interface';
 
 @Component({
   selector: 'app-main-page',
@@ -12,13 +10,13 @@ interface Character {
 })
 export class MainPageComponent {
 
-  listOfChars: Character[] = [
+  listOfChars: DbzCharacter[] = [
     { name: 'Goku', powerLvl: 99999 },
     { name: 'Vegeta', powerLvl: 8700 },
     { name: 'Gohan', powerLvl: 9099 },
   ]
 
-  newChar: Character = {
+  newChar: DbzCharacter = {
     name: '',
     powerLvl: 0
   }
