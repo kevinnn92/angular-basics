@@ -4,9 +4,7 @@
     <div class="row">
       <div class="col-md-6">
         <ul>
-          <li>Krillin 1</li>
-          <li>Goku 2</li>
-          <li>Vegeta 3</li>
+          <li *ngFor="let char of listOfChars">{{char.name}} - {{char.powerLvl | number}}</li>
         </ul>
       </div>
       <div class="col-md-6">

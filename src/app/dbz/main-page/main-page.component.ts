@@ -11,13 +11,25 @@ interface Character {
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent {
+
+  listOfChars: Character[] = [
+    { name: 'Goku', powerLvl: 99999 },
+    { name: 'Vegeta', powerLvl: 8700 },
+    { name: 'Gohan', powerLvl: 9099 },
+  ]
+
   newChar: Character = {
-    name: 'Trunks',
-    powerLvl: 14000
+    name: '',
+    powerLvl: 0
   }
 
   send() {
-    console.log(this.newChar);
+    if (this.newChar.name.trim().length === 0) return
+    this.listOfChars.push(this.newChar)
+    this.newChar = {
+      name: '',
+      powerLvl: 0
+    }
   }
 
 }
